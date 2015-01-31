@@ -82,7 +82,9 @@ YELLOW_UL='\033[38;4;33m'
 
 # Set user's library path
 LIB_PATH=/Users/$USER/Library/LaunchAgents
+
 BOOTSTRAP_TARBALL=/tmp/boostrap.tar.gz
+REMOTE_BOOTSTRAP_TARBALL="http://pkgsrc.saveosx.org/Darwin/bootstrap/bootstrap-x86_64-2014Q4.tar.gz"
 
 # Echo a message for people trying to run this....
 if [ $(basename $0) == 'resources' ]; then
