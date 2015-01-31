@@ -82,6 +82,7 @@ YELLOW_UL='\033[38;4;33m'
 
 # Set user's library path
 LIB_PATH=/Users/$USER/Library/LaunchAgents
+BOOTSTRAP_TARBALL=/tmp/boostrap.tar.gz
 
 # Echo a message for people trying to run this....
 if [ $(basename $0) == 'resources' ]; then

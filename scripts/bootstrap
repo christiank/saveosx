@@ -120,12 +120,12 @@ fi
 echo "Fetching pkgin from the Save OS X repo..."
 
 # Download the bootstrap, if not already there (from multiple runs)
-if [ ! -f /tmp/bootstrap.tar.gz ] ; then
-    saferun curl -s -o /tmp/bootstrap.tar.gz http://pkgsrc.saveosx.org/Darwin/bootstrap/bootstrap-x86_64-2014Q4.tar.gz # Safely retrive the x86_64 pkgin bootstrap from the Save OS X repo
+if [ ! -f "${BOOTSTRAP_TARBALL}" ] ; then
+    saferun curl -s -o "${BOOTSTRAP_TARBALL}" http://pkgsrc.saveosx.org/Darwin/bootstrap/bootstrap-x86_64-2014Q4.tar.gz # Safely retrive the x86_64 pkgin bootstrap from the Save OS X repo
 fi
 
 echo -e "pkgin retrieved successfully, proceeding to install...\n"
-sudo tar xfP /tmp/bootstrap.tar.gz -C / &> /dev/null # extract the pkgin bootstrap in the root directory
+sudo tar xfP "${BOOTSTRAP_TARBALL}" -C / &> /dev/null # extract the pkgin bootstrap in the root directory
 echo -e "\n"$GREEN"pkgin installed."$ESC" Adding Save OS X repo..."
 
 # Add Save OS X repo
